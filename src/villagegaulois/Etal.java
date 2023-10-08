@@ -84,6 +84,7 @@ public class Etal {
 			}
 			return chaine.toString();
 		} catch (NullPointerException e) {
+			System.out.println("L'acheteur du produit n'existe pas");
 			e.printStackTrace();
 			return "";
 		}

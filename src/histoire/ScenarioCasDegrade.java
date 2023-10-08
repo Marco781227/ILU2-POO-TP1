@@ -1,6 +1,7 @@
 package histoire;
 import personnages.*;
 import villagegaulois.*;
+import exceptions.VillageSansChefException;
 
 public class ScenarioCasDegrade {
 
@@ -27,6 +28,12 @@ public class ScenarioCasDegrade {
 			f.printStackTrace();
 		}
 		
+		Village village = new Village("VillageTest", 5, 2);
+		try {
+			village.afficherVillageois();
+		}catch (VillageSansChefException e) {
+			e.printStackTrace();
+		}
 		System.out.println("Fin du test"); 
 	}
 
